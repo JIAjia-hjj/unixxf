@@ -1,0 +1,57 @@
+
+.xxf_credit {
+  padding: 22rpx 20rpx 18rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+  background-color: #fff;
+}
+.xxf_credit .text {
+  margin-top: 2rpx;
+}
+.credit_item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  text-align: center;
+  font-size: 28rpx;
+}
+.credit_item .text {
+  font-size: 24rpx;
+  color: #333333;
+  margin-top: 8rpx;
+}
+.credit_item .iconfont {
+  display: inline-block;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 40rpx;
+}
+.xxf_credit .credit_item .iconfont {
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+  width: 56rpx;
+  border-radius: 999rpx;
+  color: #fff;
+  font-size: 56rpx;
+}
+.icon_creditx1 {
+  background-image: -webkit-linear-gradient(top, #FF8585, #FF4040);
+  background-image: linear-gradient(to bottom, #FF8585, #FF4040);
+}
+.icon_creditx2 {
+  background-image: -webkit-linear-gradient(top, #FFAA00, #FF7700);
+  background-image: linear-gradient(to bottom, #FFAA00, #FF7700);
+}
+.icon_creditx3 {
+  background-image: -webkit-linear-gradient(top, #47B5FF, #0099FF);
+  background-image: linear-gradient(to bottom, #47B5FF, #0099FF);
+}
+.icon_creditx4 {
+  background-image: -webkit-linear-gradient(top, #51F58D, #20D432);
+  background-image: linear-gradient(to bottom, #51F58D, #20D432);
+}
+

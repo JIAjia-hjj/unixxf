@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "creadit": "/components/content/creadit/Creadit",
+    "brand-car": "/pages/home/childComps/BrandCar",
+    "marketer-info": "/pages/home/childComps/MarketerInfo"
+  }
+}

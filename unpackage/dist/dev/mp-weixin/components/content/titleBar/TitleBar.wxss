@@ -1,0 +1,65 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 头部样式 */
+.title.data-v-d74cf324{
+ 
+  background-color: #fff;
+}
+.title_bar.data-v-d74cf324 {
+  margin-left: 48rpx;
+  border-bottom: 1rpx solid #E4E4E4;
+  padding: 24rpx 32rpx 24rpx 18rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-align-content: center;
+          align-content: center;
+}
+.title_left.data-v-d74cf324 {
+  font-weight: bold;
+  font-size: 32rpx;
+  position: relative;
+}
+.title_left.data-v-d74cf324::before {
+  content: '';
+  height: 32rpx;
+  width: 6rpx;
+  background-color: #fa0;
+  display: inline-block;
+  margin-right:.1rpx;
+  position: absolute;
+  top: 0;
+  left: -15rpx;
+}
+.title_right.data-v-d74cf324 {
+  color: #999;
+  font-size: 28rpx;
+  margin-top: 4rpx;
+}
+.title_right .iconfont.data-v-d74cf324{
+  font-size: 28rpx;
+}
+

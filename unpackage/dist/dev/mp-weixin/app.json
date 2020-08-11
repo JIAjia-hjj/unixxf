@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/list/list",
+    "pages/my/my"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "喜相逢以租代购",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F5F5F9"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#FFAA00",
+    "borderStyle": "white",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "static/images/tab_home.png",
+        "selectedIconPath": "static/images/tab_homes.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "选车",
+        "iconPath": "static/images/tab_car.png",
+        "selectedIconPath": "static/images/tab_cars.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/images/tab_my.png",
+        "selectedIconPath": "static/images/tab_mys.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap43.json"
+}

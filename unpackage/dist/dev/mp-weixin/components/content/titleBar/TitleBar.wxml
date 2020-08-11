@@ -1,0 +1,1 @@
+<view class="title data-v-d74cf324"><view class="title_bar data-v-d74cf324"><view class="title_left data-v-d74cf324"><slot name="left"></slot></view><view class="title_right data-v-d74cf324"><slot name="right"></slot></view></view></view>
