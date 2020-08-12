@@ -1,7 +1,10 @@
 {
   "usingComponents": {
     "creadit": "/components/content/creadit/Creadit",
+    "bottom-tip": "/components/content/bottomTip/BottomTip",
     "brand-car": "/pages/home/childComps/BrandCar",
-    "marketer-info": "/pages/home/childComps/MarketerInfo"
+    "marketer-info": "/pages/home/childComps/MarketerInfo",
+    "select-car": "/pages/home/childComps/SelectCar",
+    "hot-car": "/pages/home/childComps/HotCar"
   }
 }

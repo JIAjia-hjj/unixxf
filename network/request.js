@@ -14,7 +14,6 @@
 				'content-type': options.method == "GET" ? 'application/json' : 'application/x-www-form-urlencoded',
 			},
 		  success:(res)=> {
-		     console.log('成功');
 			 resolve(res.data);
 		  },
 		  fail:(err)=>{

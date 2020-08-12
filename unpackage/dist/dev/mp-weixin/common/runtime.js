@@ -104,11 +104,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/content/creadit/Creadit":1,"pages/home/childComps/BrandCar":1,"pages/home/childComps/MarketerInfo":1,"components/content/titleBar/TitleBar":1};
+/******/ 		var cssChunks = {"components/content/bottomTip/BottomTip":1,"components/content/creadit/Creadit":1,"pages/home/childComps/BrandCar":1,"pages/home/childComps/HotCar":1,"pages/home/childComps/MarketerInfo":1,"pages/home/childComps/SelectCar":1,"components/content/titleBar/TitleBar":1,"components/content/carItem/CarItem":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/content/creadit/Creadit":"components/content/creadit/Creadit","pages/home/childComps/BrandCar":"pages/home/childComps/BrandCar","pages/home/childComps/MarketerInfo":"pages/home/childComps/MarketerInfo","components/content/titleBar/TitleBar":"components/content/titleBar/TitleBar"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/content/bottomTip/BottomTip":"components/content/bottomTip/BottomTip","components/content/creadit/Creadit":"components/content/creadit/Creadit","pages/home/childComps/BrandCar":"pages/home/childComps/BrandCar","pages/home/childComps/HotCar":"pages/home/childComps/HotCar","pages/home/childComps/MarketerInfo":"pages/home/childComps/MarketerInfo","pages/home/childComps/SelectCar":"pages/home/childComps/SelectCar","components/content/titleBar/TitleBar":"components/content/titleBar/TitleBar","components/content/carItem/CarItem":"components/content/carItem/CarItem"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

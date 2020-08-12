@@ -9,16 +9,23 @@
 		</view>
 		<creadit class="home_creadit"></creadit>
 		<brand-car class="home_content"></brand-car>
-
+    <marketer-info></marketer-info>
+		<select-car></select-car>
+		<hot-car></hot-car>
+		<bottom-tip ></bottom-tip>
 	</view>
 </template>
 
 <script>
-	import Creadit from '../../components/content/creadit/Creadit.vue'
+	import Creadit from '@/components/content/creadit/Creadit.vue'
+	import BottomTip from 'components/content/bottomTip/BottomTip'
+		
 	import BrandCar from './childComps/BrandCar.vue'
 	import MarketerInfo from './childComps/MarketerInfo.vue'
+	import SelectCar from './childComps/SelectCar.vue'
+	import HotCar from './childComps/HotCar.vue'
 	// import TitleBar from '../../components/content/titleBar/TitleBar'
-	import {getCarBrandList,getBannerData} from '../../network/index.js'
+	import {getCarBrandList,getBannerData} from '@/network/home.js'
 	export default {
 		data() {
 			return {
@@ -29,8 +36,11 @@
 		},
 		components:{
 			Creadit,
+			BottomTip,
 			BrandCar,
-			MarketerInfo
+			MarketerInfo,
+			SelectCar,
+			HotCar
 		},
 		onLoad() {
 			console.log('1111');

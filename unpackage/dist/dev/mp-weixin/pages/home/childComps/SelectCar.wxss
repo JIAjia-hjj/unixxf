@@ -1,0 +1,80 @@
+
+.select_car.data-v-d121d050{
+  background-color: #fff;
+}
+.select.data-v-d121d050{
+  white-space: nowrap;
+  width: 100%;
+ 
+  
+  padding: 25rpx 24rpx 25rpx 24rpx;
+}
+.select_box.data-v-d121d050{
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.select_item.data-v-d121d050{
+  height: .8rpx;
+  width:620rpx;
+  display: inline-block;
+  color: #fff;
+  margin-left: 24rpx;
+  position: relative;
+}
+.select_item0.data-v-d121d050{
+  margin-left: 0;
+}
+.select_item .item.data-v-d121d050{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.select_item .item_top.data-v-d121d050{
+  padding:14rpx 0 0 156rpx;
+}
+.select_item .item_top .brand.data-v-d121d050{
+  font-size: 28rpx;
+  font-weight: bold;
+  padding-right: 20rpx;
+}
+.select_item .item_top .name.data-v-d121d050{
+  font-size: 20rpx;
+  margin-top:6rpx;
+}
+.select_item .item_bottom.data-v-d121d050{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.select_item .item_bottom .img.data-v-d121d050{
+  width:343rpx;
+  bottom: 49px;
+  position: relative;
+  margin-top: 10%;
+}
+.select_item .item_bottom .info.data-v-d121d050{
+  margin-top: 20rpx;
+  font-weight: bold;
+}
+.select_item .item_bottom .info .first_price.data-v-d121d050{
+  font-size: 32rpx;
+}
+.select_item .item_bottom .info .first_price text.data-v-d121d050{
+  font-size: 48rpx;
+  font-weight: bolder;
+}
+.select_item .item_bottom .info .btn.data-v-d121d050{
+  margin-top:24rpx;
+  width: 202rpx;
+  height: 52rpx;
+  line-height: 46rpx;
+  text-align: center;
+  border-radius:26rpx;
+  font-size: 28rpx;
+  font-weight: bolder;
+  border:3rpx solid #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+

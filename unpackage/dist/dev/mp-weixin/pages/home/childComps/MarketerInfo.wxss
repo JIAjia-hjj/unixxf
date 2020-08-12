@@ -2,17 +2,17 @@
 .xxf_marketer.data-v-e22e7f72 {
   
   width: 100%;
-  height: 1.36rem;
+  height: 136rpx;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  padding: .20rem .24rem;
+  padding: 20rpx 24rpx;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
           justify-content: space-between;
   -webkit-align-content: center;
           align-content: center;
-  font-size: .28rem;
+  font-size: 28rpx;
   border-bottom: 1px solid #E4E4E4;
 }
 .xxf_marketer .marketer_info.data-v-e22e7f72 {
@@ -22,46 +22,46 @@
   /* flex: 1; */
 }
 .xxf_marketer .photo.data-v-e22e7f72 {
-  width: .96rem;
-  height: .96rem;
+  width: 96rpx;
+  height: 96rpx;
   border-radius: 50%;
   background-color: #FF7700;
   overflow: hidden;
 }
 .xxf_marketer .info.data-v-e22e7f72 {
-  width: 3.88rem;
-  padding: 0.03rem .24rem;
+  width: 388rpx;
+  padding: 3rpx 24rpx;
 }
 .xxf_marketer .info .name.data-v-e22e7f72 {
   color: #333;
-  font-size: .36rem;
+  font-size: 36rpx;
   font-weight: bold;
-  padding-right: .10rem;
+  padding-right:10rpx;
 }
 .xxf_marketer .info .job.data-v-e22e7f72 {
   color: #999999;
-  font-size: .28rem;
-  padding-top: 0.1rem;
+  font-size: 28rpx;
+  padding-top: 1rpx;
 }
 .xxf_marketer .info .company.data-v-e22e7f72 {
   color: #999;
-  font-size: .24rem;
-  padding-top: .15rem;
+  font-size:24rpx;
+  padding-top:15rpx;
 }
 .icon_renzheng.data-v-e22e7f72{
   color:#FFAA00;
 }
 .xxf_marketer .btn.data-v-e22e7f72 {
-  margin-top: .20rem;
+  margin-top:20rpx;
   color: #fff;
-  font-size: .24rem;
+  font-size: 24rpx;
   background-color: #FFAA00;
   border: 1px solid #FFAA00;
-  width: 1.38rem;
-  height: .62rem;
-  line-height: .62rem;
+  width: 138rpx;
+  height: 62rpx;
+  line-height: 62rpx;
   text-align: center;
-  border-radius: .10rem;
+  border-radius: 1px;
 }
 
 

@@ -1,14 +1,14 @@
 {
   "pages": [
+    "pages/profile/profile",
     "pages/home/home",
-    "pages/list/list",
-    "pages/my/my"
+    "pages/list/list"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "喜相逢以租代购",
-    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarBackgroundColor": "#FFFFFF",
     "backgroundColor": "#F5F5F9"
   },
   "tabBar": {
@@ -30,13 +30,12 @@
         "selectedIconPath": "static/images/tab_cars.png"
       },
       {
-        "pagePath": "pages/my/my",
+        "pagePath": "pages/profile/profile",
         "text": "我的",
         "iconPath": "static/images/tab_my.png",
         "selectedIconPath": "static/images/tab_mys.png"
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap43.json"
+  "usingComponents": {}
 }

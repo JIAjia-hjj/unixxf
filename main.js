@@ -7,7 +7,7 @@ Vue.prototype.$request=request;
 
 //引入vuex
 import store from './store'
-
+// Vue.prototype.$store=store;
 
 Vue.config.productionTip = false
 

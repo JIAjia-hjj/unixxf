@@ -77,7 +77,8 @@
     },
     "h5" : {
         "router" : {
-            "mode" : "history"
+            "mode" : "history",
+            "base" : ""
         }
     }
 }

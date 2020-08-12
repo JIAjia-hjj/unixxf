@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
 const state={
-		phone: '18759191639',
+		phone: '未绑定',
 		marketerInfo:null,
 		userInfo: {
 		    isMarketer: false,
@@ -18,11 +18,13 @@ const store =new Vuex.Store({
 	state,
 	mutations:{
 	  setMarketerInfo(state,payload){
-				state.marketerInfo=payload.marketerInfo;
+			// console.log(payload);
+				state.marketerInfo=payload;
 	  },
 		setLoginfo(state,payload){
-				state.marketerInfo=payload.marketerInfo;
+			state.marketerInfo=payload;
 		},
+		
 	},
 	actions:{
 		

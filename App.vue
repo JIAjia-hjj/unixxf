@@ -1,5 +1,6 @@
 <script>
-
+  
+	import {gettoken,getBindedData,getMarketerInfo} from './network/login.js'
 	export default {
 		globalData:{
 			
@@ -8,7 +9,6 @@
 			// #ifdef MP-WEIXIN
 			uni.login({
 				success: res => {
-					console.log('LLAAAAAAAAAAAAAAAAAAAAAAAAAA')
 					//code值(5分钟失效)
 					console.info(res.code);
 					this.gettoken({
@@ -28,40 +28,62 @@
 		methods:{
 			//获取openid
 			gettoken(ajaxdata) {
-			    const that = this;
-			    this.$request({
-						method:'POST',
-			      url: "/v1/user/getopenid",
-			      data: ajaxdata
-			    }).then(res=>{
-						console.log('获取openid');
-						console.log(res);
-					})
-			  },
-			//获取营销人员信息
-			getMarketerInfo(uid) {
-				if (uid == "" || uid == null) {
-					return;
-				}
-				this.$request({
-					latform: 2,
-					customer_id:'',
-					unionId:'orgme4nZBIT9CqN9HdT3_6LnAb98',
-					mobile: phone,
-					address: '',
-					headimgurl:'',
-					nickname:'',
-				}).then(res=>{
-					if(res.code == 200){
-						this.$store.commit({
-							type:'getMarketerInfo',
-							marketerInfo:res.data
-						})
+				//获取openid
+				gettoken(ajaxdata).then(res=>{
+					if(res.code!=200){
+						return;
 					}
-				}).catch(err=>{
-					console.log(err);
-				});
-			},
+					this.$store.commit({
+						type:'setLoginfo',
+						openid:res.data.openid,
+						unionid:res.data.unionid,
+					})
+					this.$store.commit('setLoginfo',res.data);
+					//进来直接访问 获取基本信息
+				  return	getBindedData({openid:res.data.openid,unionid:res.data.unionid});
+				}).then(res=>{
+					if(res.code!=200){
+						return;
+					}
+					console.log(res)
+					//获取营销人员信息
+					const uid=res.data.businessid;
+					if (uid == "" || uid == null) {
+						return;
+					}
+				  return getMarketerInfo(uid);
+				}).then(res=>{
+					if(res.code!=200){
+						return	
+					}
+					this.$store.commit('setMarketerInfo',res.data);
+				})
+				
+			  //   const that = this;
+			  //   this.$request({
+					// 	method:'POST',
+			  //     url: "/v1/user/getopenid",
+			  //     data: ajaxdata
+			  //   }).then(res=>{
+					// 	this.$store.commit('setLoginfo',res.data)
+					// 	console.log('获取openid');
+					// 	console.log(res);
+						
+					// 	// 进来直接访问
+					// 	return this.$request({
+					// 	  url: "/v1/user/unauthorizeduser",
+					// 		method:'POST',
+					// 	  data: {
+					// 	    unionid: res.data.unionid,
+					// 	    openid: res.data.openid,
+					// 	  }
+					// 	})
+						
+					// }).then(res=>{
+					// 	console.log(res);
+					// 	console.log('LLLLLL')
+					// })
+			  }
 		}
 	}
 </script>

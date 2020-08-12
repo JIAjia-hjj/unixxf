@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "title-bar": "/components/content/titleBar/TitleBar",
+    "car-item": "/components/content/carItem/CarItem"
+  }
+}

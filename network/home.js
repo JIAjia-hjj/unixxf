@@ -17,3 +17,12 @@ export const getCarBrandList=()=>{
 	    }
 	  })
 }
+
+export const getCarList=(purposeId)=>{
+return request({
+    url: "/v1/car/search",
+    params:{
+      'purpose_id': purposeId
+    }
+  })
+}

@@ -19,8 +19,8 @@
 </template>
 
 <script>
-	import TitleBar from '../../../components/content/titleBar/TitleBar'
-	import {getCarBrandList,getBannerData} from '../../../network/index.js'
+	import TitleBar from '@/components/content/titleBar/TitleBar'
+	import {getCarBrandList,getBannerData} from '@/network/home.js'
   export default {
     name: "BrandCar",
     props:{
@@ -53,7 +53,6 @@
     methods:{
 			getCarBrandList(){
 				getCarBrandList().then(res=>{
-					console.log(res);
 					if(res.code==0){
 						this.carBrandList=res.data;
 						this.speedTag=res.speedTag;

@@ -1,0 +1,29 @@
+
+.bottom_tip.data-v-44a2dd20 {
+  text-align: center;
+  color: #bebebe;
+  font-size: 28rpx;
+  line-height: 90rpx;
+  position: relative;
+  letter-spacing:11rpx;
+}
+.bottom_txt.data-v-44a2dd20::before {
+  content: '';
+  width: 30%;
+  height: 1rpx;
+  background-color:#bebebe;
+  position: absolute;
+  top: 45rpx;
+  left: 30rpx;
+  font-weight: bolder;
+}
+.bottom_txt.data-v-44a2dd20::after {
+  content: '';
+  width: 30%;
+  height: 1rpx;
+  background-color:#bebebe;
+  position: absolute;
+  top: 45rpx;
+  right:30rpx;
+}
+

@@ -7669,9 +7669,87 @@ module.exports = g;
 /* 5 */,
 /* 6 */,
 /* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */
+/* 8 */
+/*!***************************************************!*\
+  !*** D:/我的文档/Desktop/uni/unixxf/network/login.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.getMarketerInfo = exports.getBindedData = exports.gettoken = void 0;
+var _request = __webpack_require__(/*! ./request.js */ 9); //wx
+//获取openid
+var gettoken = function gettoken(ajaxdata) {
+  return (0, _request.request)({
+    method: 'POST',
+    url: "/v1/user/getopenid",
+    data: ajaxdata });
+
+};
+
+// 进来直接访问
+exports.gettoken = gettoken;var getBindedData = function getBindedData(data) {
+  return (0, _request.request)({
+    method: 'POST',
+    url: "/v1/user/unauthorizeduser",
+    data: data });
+
+};
+
+//获取营销人员信息
+exports.getBindedData = getBindedData;var getMarketerInfo = function getMarketerInfo(uid) {
+  return (0, _request.request)({
+    method: 'post',
+    url: '/v1/user/customerinfo',
+    data: {
+      uid: uid } });
+
+
+};exports.getMarketerInfo = getMarketerInfo;
+
+/***/ }),
+/* 9 */
+/*!*****************************************************!*\
+  !*** D:/我的文档/Desktop/uni/unixxf/network/request.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.request = void 0; // 发起 HTTPS 网络请求
+var BASE_URL = 'http://10.0.16.62';
+var request = function request(options) {
+  return new Promise(function (resolve, reject) {
+    uni.request({
+      withCredentials: false,
+      url: BASE_URL + options.url,
+      method: options.method || "GET",
+      data: Object.assign({
+        platform: 2,
+        customer_id: '' },
+      options.data),
+      header: {
+        'content-type': options.method == "GET" ? 'application/json' : 'application/x-www-form-urlencoded' },
+
+      success: function success(res) {
+        resolve(res.data);
+      },
+      fail: function fail(err) {
+        uni.showToast({
+          title: '请求失败，请检查网络' });
+
+        reject(err);
+      } });
+
+  });
+};exports.request = request;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 10 */,
+/* 11 */,
+/* 12 */
 /*!**********************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
   \**********************************************************************************************************/
@@ -7799,46 +7877,7 @@ function normalizeComponent (
 
 
 /***/ }),
-/* 11 */
-/*!*****************************************************!*\
-  !*** D:/我的文档/Desktop/uni/unixxf/network/request.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.request = void 0; // 发起 HTTPS 网络请求
-var BASE_URL = 'http://10.0.16.62';
-var request = function request(options) {
-  return new Promise(function (resolve, reject) {
-    uni.request({
-      withCredentials: false,
-      url: BASE_URL + options.url,
-      method: options.method || "GET",
-      data: Object.assign({
-        platform: 2,
-        customer_id: '' },
-      options.data),
-      header: {
-        'content-type': options.method == "GET" ? 'application/json' : 'application/x-www-form-urlencoded' },
-
-      success: function success(res) {
-        console.log('成功');
-        resolve(res.data);
-      },
-      fail: function fail(err) {
-        uni.showToast({
-          title: '请求失败，请检查网络' });
-
-        reject(err);
-      } });
-
-  });
-};exports.request = request;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
-
-/***/ }),
-/* 12 */
+/* 13 */
 /*!*************************************************!*\
   !*** D:/我的文档/Desktop/uni/unixxf/store/index.js ***!
   \*************************************************/
@@ -7847,10 +7886,10 @@ var request = function request(options) {
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
-var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 13));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 14));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 _vue.default.use(_vuex.default);
 var state = {
-  phone: '18759191639',
+  phone: '未绑定',
   marketerInfo: null,
   userInfo: {
     isMarketer: false,
@@ -7866,11 +7905,13 @@ var store = new _vuex.default.Store({
   state: state,
   mutations: {
     setMarketerInfo: function setMarketerInfo(state, payload) {
-      state.marketerInfo = payload.marketerInfo;
+      // console.log(payload);
+      state.marketerInfo = payload;
     },
     setLoginfo: function setLoginfo(state, payload) {
-      state.marketerInfo = payload.marketerInfo;
+      state.marketerInfo = payload;
     } },
+
 
   actions: {} });var _default =
 
@@ -7879,7 +7920,7 @@ var store = new _vuex.default.Store({
 store;exports.default = _default;
 
 /***/ }),
-/* 13 */
+/* 14 */
 /*!********************************************!*\
   !*** ./node_modules/vuex/dist/vuex.esm.js ***!
   \********************************************/
@@ -8829,23 +8870,31 @@ var index_esm = {
 
 
 /***/ }),
-/* 14 */,
 /* 15 */,
 /* 16 */,
 /* 17 */,
 /* 18 */,
 /* 19 */,
-/* 20 */
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */
 /*!*********************************************************************************************!*\
   !*** ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator/index.js ***!
   \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! regenerator-runtime */ 21);
+module.exports = __webpack_require__(/*! regenerator-runtime */ 30);
 
 /***/ }),
-/* 21 */
+/* 30 */
 /*!************************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
   \************************************************************/
@@ -8876,7 +8925,7 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
-module.exports = __webpack_require__(/*! ./runtime */ 22);
+module.exports = __webpack_require__(/*! ./runtime */ 31);
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -8892,7 +8941,7 @@ if (hadRuntime) {
 
 
 /***/ }),
-/* 22 */
+/* 31 */
 /*!*****************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
   \*****************************************************/
@@ -9623,15 +9672,15 @@ if (hadRuntime) {
 
 
 /***/ }),
-/* 23 */
-/*!***************************************************!*\
-  !*** D:/我的文档/Desktop/uni/unixxf/network/index.js ***!
-  \***************************************************/
+/* 32 */
+/*!**************************************************!*\
+  !*** D:/我的文档/Desktop/uni/unixxf/network/home.js ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.getCarBrandList = exports.getBannerData = void 0;var _request = __webpack_require__(/*! ./request.js */ 11);
+Object.defineProperty(exports, "__esModule", { value: true });exports.getCarList = exports.getCarBrandList = exports.getBannerData = void 0;var _request = __webpack_require__(/*! ./request.js */ 9);
 var getBannerData = function getBannerData() {
   return (0, _request.request)({
     url: '/v1/banner/list',
@@ -9650,6 +9699,15 @@ var getCarBrandList = function getCarBrandList() {
 
 
 };exports.getCarBrandList = getCarBrandList;
+
+var getCarList = function getCarList(purposeId) {
+  return (0, _request.request)({
+    url: "/v1/car/search",
+    params: {
+      'purpose_id': purposeId } });
+
+
+};exports.getCarList = getCarList;
 
 /***/ })
 ]]);

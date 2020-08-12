@@ -2,21 +2,21 @@
   <div class="select_car">
     <title-bar>
       <div slot="left">热门爆款</div>
-      <a  slot="right" href="/list" style="color: #999;">更多车型<span class="iconfont icon_fanhui" style="padding-left: 0.05rem"></span></a>
+      <navigator  slot="right" url="/pages/list/list" open-type="switchTab" style="color: #999;">更多车型<text class="iconfont icon_fanhui" style="padding-left: 0.05rem"></text></navigator>
     </title-bar>
     <div class="select">
-      <router-link  v-for="item in hotcarList" :key="item.id"  :to="'/carinfo/'+item.id">
+      <navigator  v-for="item in hotcarList" :key="item.id" :rl="'/pages/list/list'+item.id" open-type="switchTab" >
         <car-item :carItem="item"></car-item>
-      </router-link>
+      </navigator>
      
     </div>
   </div>
 </template>
 
 <script>
-  import {getCarList} from 'network/home'
-  import TitleBar from 'components/content/titleBar/TitleBar'
-  import CarItem from 'components/content/carItem/CarItem'
+  import {getCarList} from '@/network/home'
+  import TitleBar from '@/components/content/titleBar/TitleBar'
+  import CarItem from '@/components/content/carItem/CarItem'
   export default {
     name: "HotCar",
     components:{
