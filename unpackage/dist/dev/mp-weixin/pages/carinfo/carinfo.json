@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "title-bar": "/components/content/titleBar/TitleBar",
+    "tab-control": "/components/common/tabControl/TabControl",
+    "problem": "/components/content/problem/Problem",
+    "carinfo-imgs": "/pages/carinfo/childComps/CarinfoImgs",
+    "carinfo-base": "/pages/carinfo/childComps/CarinfoBase",
+    "carinfo-store": "/pages/carinfo/childComps/CarinfoStore",
+    "carinfo-process": "/pages/carinfo/childComps/CarinfoProcess",
+    "carinfo-config": "/pages/carinfo/childComps/CarinfoConfig",
+    "carinfo-look": "/pages/carinfo/childComps/CarinfoLook",
+    "carinfo-rcommend": "/pages/carinfo/childComps/CarinfoRcommend",
+    "carinfo-footer": "/pages/carinfo/childComps/CarinfoFooter"
+  }
+}

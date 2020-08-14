@@ -28,3 +28,34 @@ export const getMarketerInfo=(uid)=>{
 	  }
 	})
 }
+
+//获取电话
+export const getPhoneNumber=(data)=>{
+	return request({
+	  method:'POST',
+	  url:'/v1/user/getphone',
+	  data:{
+			encryptedData: data.encryptedData,
+			iv:data.iv,
+			sessionKey: data.sessionKey
+	  }
+	})
+}
+
+//把电话提交到后端
+export const submitToServe=(data)=>{
+	return request({
+	  method:'POST',
+	  url:'/v1/user/sprogrambind',
+	  data:{
+				unionId:data.openid,
+				mobile: data.phone,
+				uid: data.uid||'',
+				jobNumber: data.jobNumber||'',
+				address: data.address||'',
+				headimgurl: data.headimgurl||'',
+				nickname: data.nickname||'',
+				grade:data.nickname||0
+	  }
+	})
+}

@@ -17,7 +17,7 @@
             <view class="item_bottom">
               <image :src="item.cover_img" alt="" class="img" mode="widthFix"></image>
               <view class="info">
-                <view class="first_price">首付:<span> {{item.minimum_downpayments}}</span> 万</view>
+                <view class="first_price">首付:<text> {{item.minimum_downpayments}}</text> 万</view>
                 <view class="btn">立即开走>></view>
               </view>
             </view>

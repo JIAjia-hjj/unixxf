@@ -8,7 +8,7 @@
         <view>
           <view class="name">{{marketerInfo.name?marketerInfo.name:'无法获取姓名'}}</view>
           <view class="job oneline">您的专属高级销售经理
-            <span class="iconfont icon_renzheng"></span>
+            <text class="iconfont icon_renzheng"></text>
           </view>
         </view>
         <view class="company oneline">{{marketerInfo.company}}</view>

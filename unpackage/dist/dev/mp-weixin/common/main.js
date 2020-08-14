@@ -108,7 +108,6 @@ var _login = __webpack_require__(/*! ./network/login.js */ 8);var _default =
     uni.login({
       success: function success(res) {
         //code值(5分钟失效)
-        console.info(res.code);
         _this.gettoken({
           code: res.code });
 
@@ -128,6 +127,7 @@ var _login = __webpack_require__(/*! ./network/login.js */ 8);var _default =
     gettoken: function gettoken(ajaxdata) {var _this2 = this;
       //获取openid
       (0, _login.gettoken)(ajaxdata).then(function (res) {
+        console.log(res.data);
         if (res.code != 200) {
           return;
         }
@@ -143,7 +143,6 @@ var _login = __webpack_require__(/*! ./network/login.js */ 8);var _default =
         if (res.code != 200) {
           return;
         }
-        console.log(res);
         //获取营销人员信息
         var uid = res.data.businessid;
         if (uid == "" || uid == null) {

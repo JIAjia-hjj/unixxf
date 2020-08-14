@@ -12,19 +12,20 @@ const state={
 		    headimgurl:'',
 		    nickname: '',
 		},
-		loginfo:{},//放微信openid、unionid、sessionKey
+		loginfo:null,//放微信openid、unionid、sessionKey
 };
 const store =new Vuex.Store({
 	state,
 	mutations:{
 	  setMarketerInfo(state,payload){
-			// console.log(payload);
-				state.marketerInfo=payload;
+			state.marketerInfo=payload;
 	  },
 		setLoginfo(state,payload){
-			state.marketerInfo=payload;
+			state.loginfo=payload;
 		},
-		
+		setPhone(state,payload){
+			state.phone=payload
+		}
 	},
 	actions:{
 		

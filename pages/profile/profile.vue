@@ -12,7 +12,7 @@
             <view  @click="getUserInfo"  class="text_name">Hi~ 欢迎来到喜相逢</view>
             <view class="text_txt"> {{phone!='未绑定'?'点击头像授权展示个性头像':'登录获取更多优惠信息'}}</view>
           </view>
-          <button class="login_btn" open-type="getPhoneNumber">立即登录</button>
+          <button class="login_btn" open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">立即登录</button>
         </view>
         <!-- 营销 -->
         <view class="my_info" v-else-if="userInfo.isMarketer&&phone!='未绑定'">
@@ -38,7 +38,7 @@
             <view  class="text_name">{{userInfo.nickname}}</view>
             <view class="text_txt"> 登录获取更多优惠信息</view>
           </view>
-          <button class="login_btn" open-type="getPhoneNumber">立即登录</button>
+          <button class="login_btn" open-type="getPhoneNumber"  @getphonenumber="getPhoneNumber">立即登录</button>
         </view>
         <!-- 用户 -->
         <view class="my_info" v-else>
@@ -132,7 +132,7 @@
 </template>
 
 <script>
-  // import {getCarList} from 'network/profile'
+  import {getPhoneNumber,submitToServe} from 'network/login'
 
   
   export default {
@@ -153,7 +153,7 @@
     },
     computed:{
       marketerInfo(){
-        console.log(this.$store.state.marketerInfo);
+        // console.log(this.$store.state.marketerInfo);
         return this.$store.state.marketerInfo
       },
       userInfo(){
@@ -169,13 +169,41 @@
 				 console.log(e)
 				const iv = e.detail.iv;
 				const encryptedData = e.detail.encryptedData;
-				const sessionKey = this.globalData.loginfo.sessionKey
+				const sessionKey = this.$store.state.loginfo.sessionKey
 				if (iv == null || encryptedData == null) {
 			    uni.showToast({
 			    	title:'登录失败'
 			    })
 					return false
 				}
+				const data={
+					iv,
+					encryptedData,
+					sessionKey
+				}
+				//获取电话
+				getPhoneNumber(data).then(res=>{
+					if(res.code==200){
+						this.$store.commit('',res.data.phoneNumber);
+					}
+					console.log(res);
+					//获取的电话发送给后端
+					const userInfo=this.$store.state.userInfo;
+					return this.submitToServe({
+						unionId: openid,
+						mobile: res.data.phoneNumber,
+						uid: uid,
+						jobNumber: jobNumber,
+						address:userInfo.address,
+						headimgurl:userInfo.headimgurl,
+						nickname:userInfo.nickname,
+						grade:this.globalData.grade
+					})
+					
+				}).then(res=>{
+					
+				})
+				
 				console.log('啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦');
 			},
       getUserInfo(){
@@ -189,8 +217,7 @@
       }
     },
     created() {
-      console.log('this.$store.userInfo');
-      console.log(this.$store.state.userInfo);
+
     },
 
   }

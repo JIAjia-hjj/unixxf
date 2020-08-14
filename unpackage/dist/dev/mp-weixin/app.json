@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/carinfo/carinfo",
     "pages/profile/profile",
     "pages/home/home",
     "pages/list/list"
@@ -37,5 +38,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap56.json"
 }

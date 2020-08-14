@@ -1,0 +1,80 @@
+
+.process.data-v-4798bd1e {
+  padding: 25rpx 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+}
+.process .process_item.data-v-4798bd1e {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1;
+          flex: 1 1;
+  text-align: center;
+  position: relative;
+}
+.process .process_item .iconfont.data-v-4798bd1e {
+  display: inline-block;
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 72rpx;
+  color: #666;
+}
+.process .process_item .icon_qianyue.data-v-4798bd1e {
+  font-size: 50rpx;
+  padding-top:8rpx;
+}
+.process .process_item .text.data-v-4798bd1e {
+  margin-top: 10rpx;
+  color: #333;
+  font-size: 28rpx;
+}
+.process .process_item .icon_jiantou.data-v-4798bd1e {
+  position: absolute;
+  top: 10rpx;
+  right: -16rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+
+/* 头部样式 */
+.public_title.data-v-4798bd1e {
+  margin-left: 24rpx;
+  border-bottom:1rpx solid #E4E4E4;
+  padding: 24rpx 32rpx 24rpx 18rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-align-content: center;
+          align-content: center;
+  background-color: #fff;
+}
+.title_left.data-v-4798bd1e {
+  font-weight: bold;
+  font-size: 32rpx;
+  position: relative;
+}
+.title_left.data-v-4798bd1e::before {
+  content: '';
+  height: 32rpx;
+  width:6rpx;
+  background-color: #fa0;
+  display: inline-block;
+  margin-right: 10rpx;
+  position: absolute;
+  top:7rpx;
+  left: -15rpx;
+}
+.title_right.data-v-4798bd1e {
+  color: #999;
+  font-size: 28rpx;
+  margin-top:4rpx;
+}
+.title_right .iconfont.data-v-4798bd1e{
+  font-size: 28rpx;
+}
+

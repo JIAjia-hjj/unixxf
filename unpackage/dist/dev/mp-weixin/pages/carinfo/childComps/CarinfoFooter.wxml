@@ -1,0 +1,1 @@
+<view class="carinfo_footer data-v-7c3bcf88"><view class="footer_btn data-v-7c3bcf88"><view data-event-opts="{{[['tap',[['showShare',['$event']]]]]}}" class="contact data-v-7c3bcf88" bindtap="__e"><text class="iconfont icon_share data-v-7c3bcf88"></text><view class="text data-v-7c3bcf88">一键分享</view></view><view class="lower data-v-7c3bcf88">获取最低价</view></view></view>

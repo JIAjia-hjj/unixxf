@@ -1,0 +1,24 @@
+
+.config.data-v-c2748b3a {
+  padding: 12rpx 84rpx 24rpx 74rpx;
+}
+.config .config_item.data-v-c2748b3a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-align-content: center;
+          align-content: center;
+  padding: 12rpx 0;
+}
+.config .config_item .name.data-v-c2748b3a {
+  font-size: 28rpx;
+  color: #333333;
+}
+.config .config_item .value.data-v-c2748b3a {
+  font-size: 24rpx;
+  color: #999999;
+}
+

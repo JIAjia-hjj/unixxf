@@ -1,0 +1,17 @@
+
+.look.data-v-6a9fd580 {
+  padding: 25rpx 62rpx 1rpx;
+}
+.look_item.data-v-6a9fd580 {
+  margin-bottom: 50rpx;
+}
+.look .title.data-v-6a9fd580 {
+  color: #333;
+  font-size: 28rpx;
+  padding: 18rpx 0 12rpx;
+}
+.look .des.data-v-6a9fd580 {
+  color: #999;
+  font-size: 24rpx;
+}
+

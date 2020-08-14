@@ -1,56 +1,56 @@
 <template>
-  <div>
+  <view>
     <!-- 未登录 -->
-    <div class="my_info" v-if="!isUserInfo">
-      <div class="photo marketerInfo.avatar?'':'border_none'">
-        <button class="span_name"  @click="getUserInfo" hover-class="none">
+    <view class="my_info" v-if="!isUserInfo">
+      <view class="photo marketerInfo.avatar?'':'border_none'">
+        <button class="text_name"  @click="getUserInfo" hover-class="none">
           <img src="https://sprogram.xxfgo.com/imgs/appserve/nologin_photo.png" style="width:1.20rem" />
         </button>
-      </div>
-      <div class="info_span">
-        <button  @click="getUserInfo"  class="span_name">Hi~ 欢迎来到喜相逢</button>
-        <div class="span_txt"> {{phone!='未绑定'?'点击头像授权展示个性头像':'登录获取更多优惠信息'}}</div>
-      </div>
+      </view>
+      <view class="info_text">
+        <button  @click="getUserInfo"  class="text_name">Hi~ 欢迎来到喜相逢</button>
+        <view class="text_txt"> {{phone!='未绑定'?'点击头像授权展示个性头像':'登录获取更多优惠信息'}}</view>
+      </view>
       <button class="login_btn"   data-url="/pages/bindphone/bindphone">立即登录</button>
-    </div>
+    </view>
     <!-- 营销 -->
-    <div class="my_info" v-else-if="isMarketer&&phone!='未绑定'">
-      <div class="photo marketerInfo.avatar?'':'border_none'">
+    <view class="my_info" v-else-if="isMarketer&&phone!='未绑定'">
+      <view class="photo marketerInfo.avatar?'':'border_none'">
         <img :src="marketerInfo.avatar?marketerInfo.avatar:'https://sprogram.xxfgo.com/imgs/appserve/nologin_photo.png'" style="width:1.20rem;height:1.20rem"/>
-      </div>
-      <div class="info_span">
-        <div class="span_name oneline">
+      </view>
+      <view class="info_text">
+        <view class="text_name oneline">
           marketerInfo.name
-        </div>
-        <div class="span_txt">
+        </view>
+        <view class="text_txt">
           喜相逢高级购车顾问
-          <span class="iconfont icon_renzheng"></span>
-        </div>
-      </div>
-    </div>
+          <text class="iconfont icon_renzheng"></text>
+        </view>
+      </view>
+    </view>
     <!-- 用户未授权手机号 -->
-    <div class="my_info" v-else-if="phone=='未绑定'">
-      <div class="photo marketerInfo.avatar?'':'border_none'">
+    <view class="my_info" v-else-if="phone=='未绑定'">
+      <view class="photo marketerInfo.avatar?'':'border_none'">
         <img :src="headimgurl" style="width:1.20rem;height:1.20rem;" mode="aspectFill"/>
-      </div>
-      <div class="info_span">
-        <div  class="span_name">{{nickname}}</div>
-        <div class="span_txt"> 登录获取更多优惠信息</div>
-      </div>
+      </view>
+      <view class="info_text">
+        <view  class="text_name">{{nickname}}</view>
+        <view class="text_txt"> 登录获取更多优惠信息</view>
+      </view>
       <button class="login_btn" open-type="getPhoneNumber"  data-url="/pages/bindphone/bindphone">立即登录</button>
-    </div>
+    </view>
     <!-- 用户 -->
-    <div class="my_info" v-else>
-      <div class="photo marketerInfo.avatar?'':'border_none'">
+    <view class="my_info" v-else>
+      <view class="photo marketerInfo.avatar?'':'border_none'">
       
         <img :src="headimgurl" style="width:1.20rem;height:1.20rem;" mode="aspectFill"/>
-      </div>
-      <div class="info_span">
-        <div class="span_user oneline">{{nickname}}</div>
+      </view>
+      <view class="info_text">
+        <view class="text_user oneline">{{nickname}}</view>
     
-      </div>
-    </div>
-  </div>
+      </view>
+    </view>
+  </view>
 </template>
 
 <script>

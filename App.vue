@@ -10,7 +10,6 @@
 			uni.login({
 				success: res => {
 					//code值(5分钟失效)
-					console.info(res.code);
 					this.gettoken({
 						 code:res.code
 					});
@@ -30,6 +29,7 @@
 			gettoken(ajaxdata) {
 				//获取openid
 				gettoken(ajaxdata).then(res=>{
+					console.log(res.data);
 					if(res.code!=200){
 						return;
 					}
@@ -45,7 +45,6 @@
 					if(res.code!=200){
 						return;
 					}
-					console.log(res)
 					//获取营销人员信息
 					const uid=res.data.businessid;
 					if (uid == "" || uid == null) {
