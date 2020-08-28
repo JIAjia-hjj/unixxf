@@ -1,0 +1,49 @@
+
+.search_input.data-v-76d36b4c {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: .20rem .26rem;
+  background-color: #fff;
+  color: #333;
+}
+.search_box.data-v-76d36b4c {
+  width: 6.22rem;
+  height: .60rem;
+  line-height: .60rem;
+  background-color: #f5f5f5;
+  border-radius: .36rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.search_box .icon_soushuo.data-v-76d36b4c {
+  font-size: .22rem;
+  padding: 0 .24rem;
+  color: #999;
+}
+.search_box .icon_quxiao1.data-v-76d36b4c {
+  font-size: .24rem;
+  padding: 0 .24rem;
+  color: #cfcfcf;
+}
+.search_box input.data-v-76d36b4c::-webkit-input-placeholder{
+  color: #333;
+}
+.search_box input.data-v-76d36b4c {
+  height: .60rem;
+  font-size: .24rem;
+  color: #333;
+  width: 4.84rem;
+}
+.search_txt.data-v-76d36b4c {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  line-height: .60rem;
+  padding-left: .20rem;
+  font-size: .28rem;
+  color: #333;
+}
+
+

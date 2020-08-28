@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "tab-content": "/pages/list/childComps/TabContent",
+    "brand-list": "/pages/list/childComps/BrandList"
+  }
+}

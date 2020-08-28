@@ -48,7 +48,7 @@
     display: inline-block;
     margin-right:.1rpx;
     position: absolute;
-    top: 0;
+    top: 6rpx;
     left: -15rpx;
   }
   

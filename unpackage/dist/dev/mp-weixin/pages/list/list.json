@@ -1,3 +1,13 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "tip": "/components/common/tip/Tip",
+    "search": "/components/content/search/Search",
+    "search-input": "/components/content/search/SearchInput",
+    "car-item": "/components/content/carItem/CarItem",
+    "list-tab": "/pages/list/childComps/ListTab",
+    "tab-content": "/pages/list/childComps/TabContent",
+    "brand-list": "/pages/list/childComps/BrandList",
+    "list-search": "/pages/list/childComps/ListSearch",
+    "nodata-form": "/pages/list/childComps/NodataForm"
+  }
 }

@@ -2,16 +2,24 @@
 	<view class="home">
 		<view class="swiper_box">
 			<swiper :indicator-dots="true" autoplay circular :interval="3000"  :duration="1000" >
-				<swiper-item v-for="item in bannerList">
+				<swiper-item v-for="item in bannerList" :key="item.img">
 					<image :src="item.img" mode="" mode="widthFix"></image>
 				</swiper-item>
 			</swiper>
 		</view>
 		<creadit class="home_creadit"></creadit>
 		<brand-car class="home_content"></brand-car>
-    <marketer-info></marketer-info>
-		<select-car></select-car>
-		<hot-car></hot-car>
+    
+		<view class="mtop_bg">
+			<marketer-info></marketer-info>
+		</view>
+		<view class="mtop_bg">
+				<select-car></select-car>
+		</view>
+    <view class="mtop_bg">
+    	<hot-car></hot-car>
+    </view>
+		
 		<bottom-tip ></bottom-tip>
 	</view>
 </template>
@@ -46,6 +54,7 @@
 			console.log('1111');
 			console.log(this.$store.state.phone)
 		  this.getBannerData();
+			this.getLocation();
 			// this.getCarBrandList();
 			// this.selectedClick();
 		},
@@ -131,11 +140,28 @@
 				// });
 				// this.$router.push('/list');
 			},
+			//获取定位
+			getLocation(){
+				uni.getLocation({
+					type:'wgs84',
+					geocode:true,
+					success(res) {
+						console.log('获取定位:')
+						console.log(res);
+					},
+					fail(err) {
+						console.log(err)
+					}
+				})
+			}
 		}
 	}
 </script>
 
 <style lang="scss">
+.home{
+	background-color:#F5F5F9;
+}
 .mtop_bg{
   margin-top: 24rpx;
   background: #fff;

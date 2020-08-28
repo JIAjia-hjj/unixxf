@@ -1,0 +1,27 @@
+
+.tip.data-v-71f4b15e{
+  position: fixed;
+  width: 150rpx;
+  height:100rpx;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 45%;
+  left:50%;
+  -webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+  z-index: 999999;
+  border-radius: 20rpx;
+  text-align: center;
+  padding:22rpx 18rpx;
+  color: #fff;
+  box-sizing: border-box;
+}
+.iconfont.data-v-71f4b15e{
+  font-size:30rpx;
+  padding-bottom:6rpx;
+  display: block;
+}
+.tip_text.data-v-71f4b15e{
+  white-space:pre-wrap;
+  font-size: 24rpx
+}
+

@@ -1,8 +1,8 @@
 <template>
-  <view>
+  <view class="carinfo">
     <tab-control v-show="isControlTab" class="tab_control" :tabs="['金融方案','车辆信息','常见问题','猜你喜欢']"  @tabClick="tabClick"></tab-control>
-    <swiper circular autoplay class="carinfo_img" >
-      <swiper-item v-for="item in carInfo.img" :key="item.img">
+    <swiper class="carinfo_img"   circular autoplay :indicator-dots="true"  >
+      <swiper-item   v-for="item in carInfo.img" :key="item.img">
         <image class="carimg" :src="item.img" alt="" mode="widthFix"></image>
       </swiper-item>
       <view class="swiper-pagination" slot="pagination" ></view>
@@ -10,24 +10,37 @@
     <view class="carinfo_banner">
       <image :src="bannerList[0].img" alt="" v-if="bannerList[0]" mode="widthFix"></image>
     </view>
-    <carinfo-base class="carinfo-base carinfo_content" :carInfo="carInfo"></carinfo-base>
-    <carinfo-store class="carinfo_content"></carinfo-store>
-    <carinfo-process class="carinfo_content"></carinfo-process>
+		<view  class="carinfo-base carinfo_content">
+			 <carinfo-base :carInfo="carInfo"></carinfo-base>
+		</view>
+	  <image src="https://sprogram.xxfgo.com/images/appserve/bottom_jq.png" mode="widthFix" style="width:100%;display: block;"></image>
+    <view  class="carinfo_content">
+    	<carinfo-store ></carinfo-store>
+    </view>
+		<view  class="carinfo_content">
+			<carinfo-process></carinfo-process>
+		</view>
     <view class="carinfo_advantage carinfo_content">
       <title-bar>
         <text slot="left">喜相逢优势</text>
       </title-bar>
         <image src="https://sprogram.xxfgo.com/images/appserve/advantage.jpg" mode="widthFix" style="width:100%;display:block"></image>
     </view>
-    <carinfo-config id="config" class="carinfo_content" :carInfo="carInfo"></carinfo-config>
-    <carinfo-look  class="carinfo_content" :carInfo="carInfo"></carinfo-look>
+		<view id="config" class="carinfo_content" >
+			 <carinfo-config :carInfo="carInfo"></carinfo-config>
+		</view>
+		<view class="carinfo_content">
+			<carinfo-look :carInfo="carInfo"></carinfo-look>
+		</view>
     <view id="problem" class="carinfo_problem carinfo_content">
       <title-bar>
         <text slot="left">常见问题</text>
       </title-bar>
       <problem></problem>
     </view>
-    <carinfo-rcommend id="guess" class="carinfo_content" :carid="carid"></carinfo-rcommend>
+		<view class="carinfo_content">
+			  <carinfo-rcommend id="guess" :carid="carid"></carinfo-rcommend>
+		</view>
     <view class="bottom_tip">
       <text class="bottom_txt">已经到底了</text>
     </view>
@@ -37,9 +50,9 @@
 
 <script>
   import {getCarInfo,getBannerList} from 'network/carinfo'
-  import TabControl from 'components/common/tabControl/TabControl'
-  import TitleBar from 'components/content/titleBar/TitleBar'
-  import Problem from 'components/content/problem/Problem'
+  import TabControl from '@/components/common/tabControl/TabControl'
+  import TitleBar from '@/components/content/titleBar/TitleBar'
+  import Problem from '@/components/content/problem/Problem'
   
   
   import CarinfoImgs from './childComps/CarinfoImgs'
@@ -163,6 +176,9 @@
 </script>
 
 <style scoped>
+	.carinfo{
+		 background-color: #F5F5F9;
+	}
   .tab_control{
     position: fixed;
     top:88rpx;
@@ -171,13 +187,14 @@
   }
   .carinfo_content{
     background-color: #fff;
-    margin-top: 024rpx;
+    margin-top: 24rpx;
   }
   .carinfo_img{
-    height:.6rpx;
+    height:360rpx;
     background-color: #fff;
   }
   .carinfo_img .carimg{
+		display:block;
     width:75%;
     margin:-030rpx auto 0;
   }

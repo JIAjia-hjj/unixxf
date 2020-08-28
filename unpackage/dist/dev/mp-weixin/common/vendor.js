@@ -1750,8 +1750,11 @@ var state = {
     headimgurl: '',
     nickname: '' },
 
-  loginfo: null //放微信openid、unionid、sessionKey
-};
+  loginfo: null, //放微信openid、unionid、sessionKey
+  location: {
+    city: '' } };
+
+
 var store = new _vuex.default.Store({
   state: state,
   mutations: {
@@ -2721,6 +2724,28 @@ var index_esm = {
 
 /* harmony default export */ __webpack_exports__["default"] = (index_esm);
 
+
+/***/ }),
+
+/***/ 177:
+/*!*****************************************************!*\
+  !*** D:/我的文档/Desktop/uni/unixxf/network/problem.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.getProblemList = getProblemList;var _request = __webpack_require__(/*! network/request */ 9);
+function getProblemList() {
+  return (0, _request.request)({
+    method: 'post',
+    url: '/v1/faq/list',
+    data: {
+      platform: 2,
+      customer_id: '' } });
+
+
+}
 
 /***/ }),
 
@@ -8769,57 +8794,45 @@ internalMixin(Vue);
 /***/ }),
 
 /***/ 21:
-/*!*****************************************************!*\
-  !*** D:/我的文档/Desktop/uni/unixxf/network/carinfo.js ***!
-  \*****************************************************/
+/*!**************************************************!*\
+  !*** D:/我的文档/Desktop/uni/unixxf/network/list.js ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.getStoreInfo = exports.getBannerList = exports.getRecommendList = exports.getCarInfo = void 0;var _request = __webpack_require__(/*! ./request */ 9);
-var getCarInfo = function getCarInfo(carid) {
+Object.defineProperty(exports, "__esModule", { value: true });exports.getCarList = getCarList;exports.getBrandList = getBrandList;exports.getCarTypeList = getCarTypeList;exports.getBannerList = getBannerList;var _request = __webpack_require__(/*! network/request */ 9);
+
+function getCarList(data) {
   return (0, _request.request)({
     method: 'post',
-    url: '/v1/car/detail',
-    data: {
-      car_id: carid } });
+    url: '/v1/car/search',
+    data: data });
 
-
-};exports.getCarInfo = getCarInfo;
-
-var getRecommendList = function getRecommendList(carid) {
+}
+function getBrandList() {
   return (0, _request.request)({
-    method: 'post',
-    url: '/v1/car/similar',
-    data: {
-      car_id: carid,
-      is_tui: 1 } });
-
-
-};exports.getRecommendList = getRecommendList;
-
-
-var getBannerList = function getBannerList(carid) {
-  return (0, _request.request)({
-    url: '/v1/banner/list',
+    url: '/v1/carbrand/list',
     params: {
-      platform: 3,
-      position: 9,
-      car_id: carid } });
+      brand_id: 0 } });
 
 
-};exports.getBannerList = getBannerList;
+}
+function getCarTypeList() {
+  return (0, _request.request)({
+    url: '/v1/carlevel/list' });
 
-var getStoreInfo = function getStoreInfo(point) {
+}
+function getBannerList() {
   return (0, _request.request)({
     method: 'post',
-    url: "/v1/store/caldistance", //门店
+    url: '/v1/banner/list',
     data: {
-      dimension: point.lng,
-      accuracy: point.lat } });
+      platform: 3,
+      position: 5 } });
 
 
-};exports.getStoreInfo = getStoreInfo;
+}
 
 /***/ }),
 
@@ -8854,18 +8867,18 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 38:
+/***/ 30:
 /*!*********************************************************************************************!*\
   !*** ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator/index.js ***!
   \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! regenerator-runtime */ 39);
+module.exports = __webpack_require__(/*! regenerator-runtime */ 31);
 
 /***/ }),
 
-/***/ 39:
+/***/ 31:
 /*!************************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
   \************************************************************/
@@ -8896,7 +8909,7 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
-module.exports = __webpack_require__(/*! ./runtime */ 40);
+module.exports = __webpack_require__(/*! ./runtime */ 32);
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -8913,18 +8926,7 @@ if (hadRuntime) {
 
 /***/ }),
 
-/***/ 4:
-/*!*********************************************!*\
-  !*** D:/我的文档/Desktop/uni/unixxf/pages.json ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
-/***/ 40:
+/***/ 32:
 /*!*****************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
   \*****************************************************/
@@ -9656,7 +9658,7 @@ if (hadRuntime) {
 
 /***/ }),
 
-/***/ 41:
+/***/ 33:
 /*!**************************************************!*\
   !*** D:/我的文档/Desktop/uni/unixxf/network/home.js ***!
   \**************************************************/
@@ -9695,25 +9697,69 @@ var getCarList = function getCarList(purposeId) {
 
 /***/ }),
 
-/***/ 67:
+/***/ 4:
+/*!*********************************************!*\
+  !*** D:/我的文档/Desktop/uni/unixxf/pages.json ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ 42:
 /*!*****************************************************!*\
-  !*** D:/我的文档/Desktop/uni/unixxf/network/problem.js ***!
+  !*** D:/我的文档/Desktop/uni/unixxf/network/carinfo.js ***!
   \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.getProblemList = getProblemList;var _request = __webpack_require__(/*! network/request */ 9);
-function getProblemList() {
+Object.defineProperty(exports, "__esModule", { value: true });exports.getStoreInfo = exports.getBannerList = exports.getRecommendList = exports.getCarInfo = void 0;var _request = __webpack_require__(/*! ./request */ 9);
+var getCarInfo = function getCarInfo(carid) {
   return (0, _request.request)({
     method: 'post',
-    url: '/v1/faq/list',
+    url: '/v1/car/detail',
     data: {
-      platform: 2,
-      customer_id: '' } });
+      car_id: carid } });
 
 
-}
+};exports.getCarInfo = getCarInfo;
+
+var getRecommendList = function getRecommendList(carid) {
+  return (0, _request.request)({
+    method: 'post',
+    url: '/v1/car/similar',
+    data: {
+      car_id: carid,
+      is_tui: 1 } });
+
+
+};exports.getRecommendList = getRecommendList;
+
+
+var getBannerList = function getBannerList(carid) {
+  return (0, _request.request)({
+    url: '/v1/banner/list',
+    params: {
+      platform: 3,
+      position: 9,
+      car_id: carid } });
+
+
+};exports.getBannerList = getBannerList;
+
+var getStoreInfo = function getStoreInfo(point) {
+  return (0, _request.request)({
+    method: 'post',
+    url: "/v1/store/caldistance", //门店
+    data: {
+      dimension: point.lng,
+      accuracy: point.lat } });
+
+
+};exports.getStoreInfo = getStoreInfo;
 
 /***/ }),
 

@@ -13,6 +13,9 @@ const state={
 		    nickname: '',
 		},
 		loginfo:null,//放微信openid、unionid、sessionKey
+		location:{
+		  city:''	
+		}
 };
 const store =new Vuex.Store({
 	state,

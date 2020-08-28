@@ -44,6 +44,7 @@
     padding: 25rpx 0;
     display: flex;
     justify-content: space-around;
+		/* background-color: #fff; */
   }
   
   .process .process_item {
@@ -56,7 +57,7 @@
     display: inline-block;
     height: 72rpx;
     line-height: 72rpx;
-    font-size: 72rpx;
+    font-size: 60rpx;
     color: #666;
   }
   
@@ -65,7 +66,7 @@
     padding-top:8rpx;
   }
   
-  .process .process_item .text {
+  .process .process_item .txt {
     margin-top: 10rpx;
     color: #333;
     font-size: 28rpx;

@@ -27,7 +27,6 @@
       <view class="btn_box">
         <view class="btn" @click="submit">免费到店试车</view>
       </view>
-  
     </view>
   </view>
 </template>

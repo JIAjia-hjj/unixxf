@@ -5,9 +5,9 @@
       <router-link class="right" to="/config">详细参数配置	<text class="iconfont icon_fanhui"></text></router-link>
     </title-bar>
     <view class="car_list">
-      <router-link  v-for="item in recommendList" :key="item.id"  :to="'/carinfo/'+item.id">
+      <navigator  v-for="item in recommendList" :key="item.id"  :url="'/pages/carinfo/carinfo/'+item.id">
         <car-item :carItem="item"></car-item>
-      </router-link>
+      </navigator>
     </view>
 
   </view>
@@ -51,36 +51,12 @@
         }).catch(err=>{
           console.log(err);
         });
-        // app.request({
-        //   url: "/v1/car/similar",
-        //   data: {
-        //     car_id: this.data.carId,
-        //     is_tui: 1
-        //   },
-        //   success: res => {
-        //     if (res.data.data == "undefined" || res.data.data.length == 0) {
-        //       return;
-        //     }
-        //     res.data.data.forEach(function(item, index) {
-        //       item.jiequ_brand_name = item.jiequ_brand_name ? item.jiequ_brand_name : item.name.split(' ')[0];
-        //       item.name = item.name.split(" ").slice(1).join(' ');
-        //     });
-        //
-        //     this.setData({
-        //       recommendList: res.data.data
-        //     })
-        //   },
-        //   fail: () => {
-        //     app.showTip('获取推荐数据失败')
-        //   }
-        // })
       },
     },
     created(){
-      this.getRecommendList();
     },
     mounted() {
-      // this.getRecommendList();
+      this.getRecommendList();
     }
   
   }

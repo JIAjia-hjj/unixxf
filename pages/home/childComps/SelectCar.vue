@@ -6,7 +6,7 @@
     </title-bar>
     <view class="select">
       <view class="select_box">
-        <navigator class="select_item" v-for="(item,index) in selectcarList" :key="item.id" v-if="index<5" open-type="navigate" :url="'/pages/carinfo/carinfo'+item.id">
+        <navigator class="select_item" v-for="(item,index) in selectcarList" :key="item.id" v-if="index<5" open-type="navigate" :url="'/pages/carinfo/carinfo?carid='+item.id">
 					<!-- require('static/images/home/select'+index+'.png') -->
           <image :src="'/static/images/home/select'+index+'.png'" alt="" style="width:620rpx" mode="widthFix"></image>
           <view class="item">

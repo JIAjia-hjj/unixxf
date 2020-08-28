@@ -1,0 +1,129 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 无数据 */
+.nodata_form.data-v-0ff4d75e{
+  padding-top: 24rpx;
+}
+.nodata_form .txt1.data-v-0ff4d75e{
+  text-align: center;
+  color: #333333;
+  font-size: 28rpx;
+  top: 430rpx;
+}
+.nodata_form .icon_nocontent.data-v-0ff4d75e{
+  padding-right: 10rpx;
+}
+.nodata_form .form.data-v-0ff4d75e{
+}
+.nodata_form .form .txt2.data-v-0ff4d75e{
+  text-align: center;
+  font-size: 28rpx;
+  padding-top: 52rpx;
+  color: #999999
+}
+.nodata_form .form .input.data-v-0ff4d75e {
+  width: 606rpx;
+  height: 90rpx;
+  border-radius: 60rpx;
+  line-height: 90rpx;
+  border:1rpx solid #e4e4e4;
+  background: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 28rpx;
+  margin: 54rpx auto 0;
+  position: relative;
+}
+.nodata_form .form .input_cartype.data-v-0ff4d75e::after {
+  display: block;
+  content:'';
+  width: 606rpx;
+  height: 1px;
+  background-color:#E4E4E4;
+  position: absolute;
+  bottom:-49rpx;
+  left: 0;
+}
+.nodata_form .form .input .iconfont.data-v-0ff4d75e {
+  text-align: center;
+  width: 120rpx;
+  position: relative;
+  color: #999;
+  font-size: 50rpx;
+}
+.nodata_form .form .input .iconfont.data-v-0ff4d75e::after {
+  content: '';
+  width:3rpx;
+  height: 60rpx;
+  display: inline-block;
+  background-color: #e4e4e4;
+  position: absolute;
+  bottom: 20rpx;
+  right: 12rpx;
+}
+.nodata_form .form .input input.data-v-0ff4d75e {
+  height: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  margin-left: 10rpx;
+}
+.nodata_form .form .input.data-v-0ff4d75e::-webkit-input-placeholder {
+  color: #999;
+  font-weight: lighter;
+}
+.nodata_form .form .input.data-v-0ff4d75e::-moz-placeholder {
+  color: #999;
+  font-weight: lighter;
+}
+.nodata_form .form .input.data-v-0ff4d75e::-ms-input-placeholder {
+  color: #999;
+  font-weight: lighter;
+}
+.nodata_form .form .btn.data-v-0ff4d75e {
+  width: 606rpx;
+  height: 90rpx;
+  border-radius: 60rpx;
+  line-height: 90rpx;
+  background-color: #fa0;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  margin: 98rpx auto 0;
+}
+

@@ -1,0 +1,73 @@
+
+.brand.data-v-1b93a606 {
+    /* position: fixed; */
+/*   top: 168rpx;
+	  bottom:--window-bottom;
+    left: 0;
+    right: 0; */
+    background: #fff;
+    z-index: 3;
+    overflow: auto;
+}
+.brand .letter.data-v-1b93a606 {
+    position: fixed;
+    bottom: 28rpx;
+    right: 24rpx;
+    width: 20rpx;
+    color: #999;
+    font-size: 20rpx;
+    font-weight: normal;
+}
+.brand .letter .letter_item.data-v-1b93a606 {
+    padding:02rpx 0;
+    text-align: center;
+}
+.brand .brand_group.data-v-1b93a606 {
+    /*height: 100vh;*/
+    position: relative;
+    border-bottom:01rpx solid #e4e4e4;
+    color: #333;
+    font-size: 28rpx;
+}
+.brand .brand_group .brand_item.data-v-1b93a606 {
+    height: 90rpx;
+    line-height: 90rpx;
+    margin-left: 48rpx;
+    border-bottom:01rpx solid #e4e4e4;
+		/* overflow: hidden; */
+}
+.brand .brand_group:last-child .brand_item.data-v-1b93a606:last-child{
+    border-color:transparent;
+}
+.brand_active.data-v-1b93a606 {
+    color: #fa0;
+    position: relative;
+}
+.brand_active.data-v-1b93a606::after {
+    content: '\e62d';
+    font-family: "iconfont";
+    width: 30rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    position: absolute;
+    top: 50%;
+    margin-top: -15rpx;
+    right: 48rpx;
+}
+.brand_group .brand_item image.data-v-1b93a606 {
+    width: 72rpx;
+    vertical-align: middle;
+    margin-right: 24rpx;
+    display:inline-block;
+		max-height: 90rpx;
+}
+.brand .brand_group .group_letter.data-v-1b93a606 {
+    background-color: #f5f5f9;
+    height: 48rpx;
+    padding-left: 48rpx;
+    line-height: 48rpx;
+}
+.border_none.data-v-1b93a606{
+		border: none !important;
+}
+

@@ -44,6 +44,7 @@
     align-content: center;
     font-size: 28rpx;
     border-bottom: 1px solid #E4E4E4;
+		background-color: #fff;
   }
   
   .xxf_marketer .marketer_info {

@@ -26,7 +26,7 @@
 <style scoped>
   .carinfo_footer {
     width: 100%;
-    height: .90rem;
+    height: 90rpx;
   }
   .footer_btn{
     position: fixed;
@@ -35,33 +35,33 @@
     right: 0;
     text-align: center;
     z-index: 6;
-    height: .90rem;
+    height: 90rpx;
     display: flex;
     margin: 0 auto;
     max-width: 750px;
   }
   
   .carinfo_footer .contact {
-    width: 1.94rem;
+    width: 194rpx;
     background-color: #fff;
     color: #999;
-    font-size: .20rem;
-    padding-top: .10rem;
-    border-top: 0.01rem solid rgb(232, 232, 232);
+    font-size: 20rpx;
+    padding-top: 10rpx;
+    border-top: 001rpx solid rgb(232, 232, 232);
   }
   
   .carinfo_footer .lower {
     flex: 1;
     background-color: #fa0;
     color: #fff;
-    font-size: .28rem;
-    line-height: .90rem;
+    font-size: 28rpx;
+    line-height: 90rpx;
     border-radius: 0;
   }
   /*@supports (bottom: constant(safe-area-inset-bottom)) or (bottom: env(safe-area-inset-bottom)) {*/
     /*.carinfo_footer {*/
-      /*height: constant(1.90rem + env(safe-area-inset-bottom));*/
-      /*height: calc(1.90rem+ env(safe-area-inset-bottom));*/
+      /*height: constant(190rpx + env(safe-area-inset-bottom));*/
+      /*height: calc(190rpx+ env(safe-area-inset-bottom));*/
     /*}*/
   
     /*.footer_btn{*/

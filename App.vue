@@ -94,5 +94,8 @@
 	  -webkit-box-sizing: border-box;
 	  
 	}
+	navigator{
+		text-decoration: none;
+	}
 	/*每个页面公共css */
 </style>

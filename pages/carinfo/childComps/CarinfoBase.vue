@@ -10,9 +10,9 @@
         </view>
       </view>
       <view class="xx_br" style="text-align: center">
-        <img src="https://sprogram.xxfgo.com/images/appserve/xx_br.png"  style="width: 692rpx;margin: 0 auto"/>
+        <image src="https://sprogram.xxfgo.com/images/appserve/xx_br.png" mode="widthFix" style="width: 692rpx;margin: 0 auto"></image>
       </view>
-      <view class="carinfo_base2 by_bottom">
+      <view class="carinfo_base2">
         <view class="price">
           <view class="price_item downpayments">
             首付
@@ -20,7 +20,7 @@
           </view>
         </view>
       </view>
-
+     
   </view>
 </template>
 
@@ -44,6 +44,7 @@
 <style scoped>
   .carinfo_base {
     color: #333;
+
   }
   
   .carinfo_base1 {
